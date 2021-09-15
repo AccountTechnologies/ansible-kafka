@@ -13,7 +13,7 @@ Environment="JMX_PORT=9999"
 Environment="KAFKA_OPTS=-Djava.net.preferIPv4Stack=True"
 Environment="KAFKA_JVM_PERFORMANCE_OPTS=-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+DisableExplicitGC -Djava.awt.headless=true"
 Environment="KAFKA_HEAP_OPTS=-Xmx2G -Xms2G"
-Environment="KAFKA_JMX_OPTS=-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname={{hostvars[inventory_hostname]['internal_ip']}}"
+Environment="KAFKA_JMX_OPTS=-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname={{hostvars[inventory_hostname]['internal_network_ip']}}"
 ExecStart={{ kafka_dir }}/bin/kafka-server-start.sh /etc/kafka/server.properties
 ExecStop={{ kafka_dir }}/bin/kafka-server-stop.sh
 User={{ kafka_user }}
