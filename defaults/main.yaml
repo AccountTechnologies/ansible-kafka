@@ -97,6 +97,9 @@ kafka_log_segment_bytes: 1073741824
 # to the retention policies
 kafka_log_retention_check_interval_ms: 300000
 
+#controlling how long Kafka will remember offsets in the special topic. (1440 is the kafka default)
+kafka_offset_retention_minutes: 1440 
+
 # Enable auto creation of topic on the server
 kafka_auto_create_topics_enable: false
 
