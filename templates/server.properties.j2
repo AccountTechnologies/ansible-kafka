@@ -140,6 +140,10 @@ log.segment.bytes={{ kafka_log_segment_bytes }}
 # to the retention policies
 log.retention.check.interval.ms={{ kafka_log_retention_check_interval_ms }}
 
+############################# Offset Basics #########################
+
+offsets.retention.minutes={{ kafka_offset_retention_minutes }}
+
 ############################# Zookeeper #############################
 
 # Zookeeper connection string (see zookeeper docs for details).
